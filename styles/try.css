@@ -1,0 +1,302 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  transition:0.3s;
+}
+
+.container{
+  width:100%;
+  max-width:450px;
+  background:#111827;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.5);
+  animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.theme-toggle{
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:50%;
+  background:#1e293b;
+  color:white;
+  cursor:pointer;
+  float:right;
+  font-size:18px;
+}
+
+.hero-banner img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:20px;
+  margin-bottom:20px;
+}
+
+.profile-section{
+  text-align:center;
+}
+
+.profile-img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #2563eb;
+  margin-top:-70px;
+  background:white;
+}
+
+.profile-section h1{
+  margin-top:15px;
+  font-size:32px;
+}
+
+.bio{
+  margin-top:10px;
+  color:#cbd5e1;
+}
+
+.status{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  margin-top:10px;
+}
+
+#statusDot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:lime;
+}
+
+.live-clock{
+  margin-top:15px;
+}
+
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  margin-top:20px;
+}
+
+.stats h3{
+  font-size:24px;
+}
+
+.stats span{
+  color:#94a3b8;
+}
+
+.links{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  margin-top:30px;
+}
+
+.link-btn{
+  text-decoration:none;
+  color:white;
+  padding:16px;
+  border-radius:15px;
+  font-size:17px;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  transition:0.3s;
+}
+
+.link-btn:hover{
+  transform:scale(1.03);
+}
+
+.whatsapp{
+  background:#25d366;
+}
+
+.instagram{
+  background:#e1306c;
+}
+
+.tiktok{
+  background:black;
+}
+
+.facebook{
+  background:#1877f2;
+}
+
+.email{
+  background:#ea4335;
+}
+
+.phone{
+  background:#14b8a6;
+}
+
+.save{
+  background:#8b5cf6;
+}
+
+.portfolio{
+  background:#f59e0b;
+}
+
+.utility-buttons{
+  margin-top:25px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.utility-btn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:15px;
+  background:#2563eb;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.qr-section{
+  margin-top:35px;
+  text-align:center;
+}
+
+.qr-image{
+  width:220px;
+  background:white;
+  padding:10px;
+  border-radius:20px;
+  margin-top:15px;
+}
+
+.share-btn{
+  width:100%;
+  margin-top:20px;
+  padding:15px;
+  border:none;
+  border-radius:15px;
+  background:#2563eb;
+  color:white;
+  font-size:17px;
+  cursor:pointer;
+}
+
+.contact-form{
+  margin-top:30px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#1e293b;
+  color:white;
+}
+
+.contact-form textarea{
+  min-height:120px;
+  resize:none;
+}
+
+.contact-form button{
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#2563eb;
+  color:white;
+  cursor:pointer;
+  font-size:16px;
+}
+
+footer{
+  text-align:center;
+  margin-top:30px;
+  color:#94a3b8;
+  font-size:14px;
+}
+
+.floating-whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#25d366;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-decoration:none;
+  font-size:30px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+.light-mode{
+  background:#f1f5f9;
+  color:black;
+}
+
+.light-mode .container{
+  background:white;
+}
+
+.light-mode .bio,
+.light-mode footer,
+.light-mode .stats span{
+  color:#475569;
+}
+
+.light-mode .contact-form input,
+.light-mode .contact-form textarea{
+  background:#e2e8f0;
+  color:black;
+}
+
+@media(max-width:480px){
+
+  .container{
+    padding:20px;
+  }
+
+}
