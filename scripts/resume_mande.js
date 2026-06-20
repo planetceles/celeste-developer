@@ -1,4 +1,5 @@
-const resumeUrl = "https://planetceles.github.io/resume/data/resume.json";
+// const resumeUrl = "https://planetceles.github.io/resume/data/resume.json";
+const resumeUrl = "https://planetceles.github.io/celeste-developer/data/resume.json";
 const resumeData = document.querySelector("#resume");
 
 async function getResumeData() {
@@ -26,11 +27,36 @@ const displayResume = (resume) => {
 
         // I will add a whatsapp icon to the phone number
         let resumePhoneWhatsapp = document.createElement("img");
+        resumePhoneWhatsapp.setAttribute("src", details.whatsappIcon);
+        // resumePhoneWhatsapp.setAttribute("src", `<a href="${details.whatsapp}" target="_blank" rel="noopener noreferrer">${details.whatsappIcon}</a>`);
+        // resumePhoneWhatsapp.innerHTML = `<a href="${details.whatsapp}" target="_blank" rel="noopener noreferrer">${details.whatsappIcon}</a>`;
+        // resumePhoneWhatsapp.src = `<a href="${details.whatsapp}" target="_blank" rel="noopener noreferrer">${details.whatsappIcon}</a>`;
+        resumePhoneWhatsapp.setAttribute("alt", "WhatsApp Me");
+        resumePhoneWhatsapp.setAttribute("loading", "lazy");
+        resumePhoneWhatsapp.style.width = "20px";
+        resumePhoneWhatsapp.style.height = "auto";
+        // resumePhoneWhatsapp.style.display = "block";
+
+        // I will add the whatsapp link
+        let whatsappLink = document.createElement("a");
+        // whatsappLink.setAttribute("href", `${details.whatsapp}`);
+        whatsappLink.setAttribute("href", details.whatsapp);
+        whatsappLink.setAttribute("target", "_blank");
+        whatsappLink.setAttribute("rel", "noopener noreferrer");
+        whatsappLink.innerHTML = `<a href="${details.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp</a>`;
+
+        // I will add the link to the whatsapp icon
+        whatsappLink.appendChild(resumePhoneWhatsapp);
+        // resumePhoneWhatsapp.innerHTML = `<a href="https://wa.me/${details.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp</a>`;
 
         // Here I will add my picture
-        let myPortrait = document.createElement("img");
-        myPortrait.src = details.myPhoto;
-        myPortrait.alt = `${details.name}`;
+        // let myPortrait = document.createElement("img");
+        // myPortrait.setAttribute("src", details.myPhoto);
+        // myPortrait.setAttribute("alt", `${details.name}`);
+        // myPortrait.setAttribute("loading", "lazy");
+        // myPortrait.style.width = "200px";
+        // myPortrait.style.height = "auto";
+        // myPortrait.style.display = "block";
 
         let resumeLinkedIn = document.createElement("p");
         let resumeAddress = document.createElement("p");
@@ -153,9 +179,7 @@ const displayResume = (resume) => {
         resumeEmail.innerHTML = `<a href="mailto:${details.email}" target="_blank" rel="noopener noreferrer">${details.email}</a>`;
         resumePhone.innerHTML = `<a href="tel:${details.phone}" target="_blank" rel="noopener noreferrer">${details.phone}</a>`;
 
-        // Adding whatsapp icon to the phone number
-        resumePhoneWhatsapp.src = details.whatsappIcon;
-        resumePhoneWhatsapp.alt = "WhatsApp Me";
+     
 
         resumeLinkedIn.innerHTML = `<a href="${details.linkedIn}" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/celestin-mande-mande1</a>`;
         resumeAddress.textContent = `${details.address}`;
@@ -168,8 +192,8 @@ const displayResume = (resume) => {
 
         resumeCall.appendChild(resumeEmail);
         resumeCall.appendChild(resumePhone);
-        resumeCall.appendChild(resumePhoneWhatsapp);
-        resumeCall.appendChild(myPortrait);
+        resumeCall.appendChild(whatsappLink);
+        // resumeCall.appendChild(myPortrait);
 
         skillCard.appendChild(resumeSkillPartOne);
         skillCard.appendChild(resumeSkillPartTwo);
@@ -193,6 +217,9 @@ const displayResume = (resume) => {
         resumePaper.appendChild(resumeEducationTitle);
         resumePaper.appendChild(resumeEducation);
 
+        // if (resumeData) {
+        //     resumeData.appendChild(resumePaper);
+        // }
         resumeData.appendChild(resumePaper);
     });
 }
