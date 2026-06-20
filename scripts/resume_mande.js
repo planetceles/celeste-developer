@@ -27,6 +27,11 @@ const displayResume = (resume) => {
         // I will add a whatsapp icon to the phone number
         let resumePhoneWhatsapp = document.createElement("img");
 
+        // Here I will add my picture
+        let myPortrait = document.createElement("img");
+        myPortrait.src = details.myPhoto;
+        myPortrait.alt = `${details.name}`;
+
         let resumeLinkedIn = document.createElement("p");
         let resumeAddress = document.createElement("p");
         let resumeTitle = document.createElement("p");
@@ -164,6 +169,7 @@ const displayResume = (resume) => {
         resumeCall.appendChild(resumeEmail);
         resumeCall.appendChild(resumePhone);
         resumeCall.appendChild(resumePhoneWhatsapp);
+        resumeCall.appendChild(myPortrait);
 
         skillCard.appendChild(resumeSkillPartOne);
         skillCard.appendChild(resumeSkillPartTwo);
