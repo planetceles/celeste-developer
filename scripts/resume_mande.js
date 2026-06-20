@@ -23,7 +23,7 @@ const displayResume = (resume) => {
         let resumeName = document.createElement("h1");
         let resumeEmail = document.createElement("p");
         let resumePhone = document.createElement("p");
-        
+
         // I will add a whatsapp icon to the phone number
         let resumePhoneWhatsapp = document.createElement("img");
 
@@ -147,6 +147,11 @@ const displayResume = (resume) => {
         resumeName.textContent = `${details.name}`;
         resumeEmail.innerHTML = `<a href="mailto:${details.email}" target="_blank" rel="noopener noreferrer">${details.email}</a>`;
         resumePhone.innerHTML = `<a href="tel:${details.phone}" target="_blank" rel="noopener noreferrer">${details.phone}</a>`;
+
+        // Adding whatsapp icon to the phone number
+        resumePhoneWhatsapp.src = details.whatsappIcon;
+        resumePhoneWhatsapp.alt = "WhatsApp Me";
+
         resumeLinkedIn.innerHTML = `<a href="${details.linkedIn}" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/celestin-mande-mande1</a>`;
         resumeAddress.textContent = `${details.address}`;
         resumeTitle.textContent = `${details.title}`;
@@ -158,6 +163,7 @@ const displayResume = (resume) => {
 
         resumeCall.appendChild(resumeEmail);
         resumeCall.appendChild(resumePhone);
+        resumeCall.appendChild(resumePhoneWhatsapp);
 
         skillCard.appendChild(resumeSkillPartOne);
         skillCard.appendChild(resumeSkillPartTwo);
