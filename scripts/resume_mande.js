@@ -43,7 +43,7 @@ const displayResume = (resume) => {
         whatsappLink.setAttribute("href", details.whatsapp);
         whatsappLink.setAttribute("target", "_blank");
         whatsappLink.setAttribute("rel", "noopener noreferrer");
-        whatsappLink.innerHTML = `<a href="${details.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp</a>`;
+        // whatsappLink.innerHTML = `<a href="${details.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp</a>`;
 
         // I will add the link to the whatsapp icon
         whatsappLink.appendChild(resumePhoneWhatsapp);

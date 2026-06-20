@@ -31,7 +31,7 @@ body {
     /* flex-direction: row; */
     /* align-items: center; */
     justify-self: center;
-    column-gap: 50px;
+    column-gap: 40px;
 }
 .address {
     margin-bottom: 1rem;
