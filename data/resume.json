@@ -1,0 +1,101 @@
+{
+    "resume": [
+        {
+            "name": "Celestin Mande Mande",
+            "email": "mandecmande@gmail.com",
+            "phone": "+27 65 885 7907",
+            "linkedIn": "https://www.linkedin.com/in/celestin-mande-mande1/",
+            "gitHub": "",
+            "address": "Ridgeway, Johannesburg South 2091",
+            "title": "Professional Summary",
+            "summary": "I am a detail-oriented and highly accurate professional with strong experience in administrative support, student services, data processing, and information management. I am skilled in entering, validating, and organizing large volumes of data with exceptional attention to detail. Adept at working with digital tools, spreadsheets, insurance portals, and content management systems. Known for strong communication skills, professionalism, and the ability to follow instructions while meeting strict deadlines. I bring experience from educational administration, data review, and analytics environments.",
+            "skill": "Skills",
+            "skillPartOne": [
+                "Accuracy & Attention to Detail",
+                "Technology Savvy (Web Portals, Sheets, Forms)",
+                "Time & Task Management"
+            ],
+            "skillPartTwo": [
+                "Quality Orientation & Problem Solving",
+                "Team Collaboration & Professional Development",
+                "Following Directions with Precision"
+            ],
+            "experienceTitle": "Experience",
+            "experience": [
+                {
+                    "position": "Registration & Graduation Agent",
+                    "company": "BYU Pathway Worldwide",
+                    "duration": "June 2025 – Present",
+                    "responsibilities": [
+                        "Entered student data into Excel Workbooks and institutional systems with precision",
+                        "Collaborate with student support teams to resolve discrepancies or missing information",
+                        "Documented student interactions and academic decisions with clarity and precision"
+                    ]
+                },
+                {
+                    "position": "Registration & Graduation Agent",
+                    "company": "Springboard",
+                    "duration": "2024 – June 2025",
+                    "responsibilities": [
+                        "Reviewed, validated, and input metadata with high precision",
+                        "Communicated with projects leads to resolve inconsistencies or missing data",
+                        "Manage large data sets while maintaining speed and accuracy"
+                    ]
+                },
+                {
+                    "position": "Data Analytics Project",
+                    "company": "Acce10X",
+                    "duration": "April 2025",
+                    "responsibilities": [
+                        "Designed and built an interactive Power BI dashboard from raw datasets to visualize key performance metrics and trends.",
+                        "Integrated multiple data sources using Power Query and SQL for efficient data transformation",
+                        "Manage large data sets while maintaining speed and accuracy"
+                    ]
+                },
+                {
+                    "position": "Data Entry & School Records Manager",
+                    "company": "",
+                    "duration": "2021 – 2023",
+                    "responsibilities": [
+                        "Entered and maintained school-wide records, grades, attendance, and student information",
+                        "Collected, structured, analyzed data for school reporting."
+                        
+                    ]
+                }
+            ],
+            "educationTitle": "Education",
+            "education": [
+                {
+                    "degree": "Bachelor’s degree in software development",
+                    "institution": [
+                        "Brigham Young University-Idaho"
+                    ],
+                    "duration": "In Progress",
+                    "skills": []
+                },
+                {
+                    "degree": "Data Analytics Certificate",
+                    "institution": [
+                        "Acee10X"
+                    ],
+                    "duration": "Completed April 2025",
+                    "skills": [
+                        "Excel",
+                        "Power Query",
+                        "Power BI",
+                        "Data Cleaning",
+                        "SQL"
+                    ]
+                },
+                {
+                    "degree": "PathwayConnect Certificate",
+                    "institution": [
+                        "BYU-Pathway Worldwide"
+                    ],
+                    "duration": "Completed 2024",
+                    "skills": []
+                }
+            ]
+        }
+    ]
+}

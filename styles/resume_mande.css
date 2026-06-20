@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f4f4f4;
+    color: #000000;
+}
+.resume-card {
+    width: 100%;
+    max-width: 790px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    h1 {
+        padding-bottom: .7rem;
+    }
+}
+.title-center {
+    text-align: center;
+    line-height: 1.5rem;
+    /* margin-bottom: 1rem; */
+}
+.email-phone {
+    /* color: red; */
+    display: flex;
+    /* flex-direction: row; */
+    /* align-items: center; */
+    justify-self: center;
+    column-gap: 50px;
+}
+.address {
+    margin-bottom: 1rem;
+}
+.title-resume,
+.skill-title,
+.experience-title,
+.education-title {
+    /* color: red; */
+    margin-bottom: .8rem;
+    font-weight: bold;
+}
+.summary,
+.experience,
+.institution {
+    margin-bottom: 1rem;
+    /* color: red; */
+    line-height: 1.3rem;
+}
+.skill-card {
+    /* color: red; */
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+    line-height: 1.3rem;
+}
+.responsibility-list,
+.education {
+    /* color: red; */
+    margin-left: 2.3rem;
+    padding-bottom: 1rem;
+}
+.position-duration,
+.education-period {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: .3rem;
+}
+.period {
+    font-style: italic;
+}
+.education-block {
+    /* color: red; */
+    line-height: 1rem;
+}
+.education-skills {
+    margin-bottom: 1rem;
+}
