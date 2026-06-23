@@ -27,7 +27,8 @@
             "experience": [
                 {
                     "position": "Registration & Graduation Agent",
-                    "company": "BYU Pathway Worldwide",
+                    "company": "Springboard",
+                    "companyWebsite": "https://www.hirespringboard.com/",
                     "duration": "June 2025 – Present",
                     "responsibilities": [
                         "Entered student data into Excel Workbooks and institutional systems with precision",
@@ -38,6 +39,7 @@
                 {
                     "position": "Registration & Graduation Agent",
                     "company": "Springboard",
+                    "companyWebsite": "https://www.hirespringboard.com/",
                     "duration": "2024 – June 2025",
                     "responsibilities": [
                         "Reviewed, validated, and input metadata with high precision",
@@ -48,6 +50,7 @@
                 {
                     "position": "Data Analytics Project",
                     "company": "Acce10X",
+                    "companyWebsite": "",
                     "duration": "April 2025",
                     "responsibilities": [
                         "Designed and built an interactive Power BI dashboard from raw datasets to visualize key performance metrics and trends.",
@@ -58,6 +61,7 @@
                 {
                     "position": "Data Entry & School Records Manager",
                     "company": "",
+                    "companyWebsite": "",
                     "duration": "2021 – 2023",
                     "responsibilities": [
                         "Entered and maintained school-wide records, grades, attendance, and student information",
@@ -73,6 +77,7 @@
                     "institution": [
                         "Brigham Young University-Idaho"
                     ],
+                    "instWebsite": "https://www.byui.edu/",
                     "duration": "In Progress",
                     "skills": []
                 },
@@ -81,6 +86,7 @@
                     "institution": [
                         "Acee10X"
                     ],
+                    "instWebsite": "",
                     "duration": "Completed April 2025",
                     "skills": [
                         "Excel",
@@ -95,6 +101,7 @@
                     "institution": [
                         "BYU-Pathway Worldwide"
                     ],
+                    "instWebsite": "https://www.byupathway.edu/",
                     "duration": "Completed 2024",
                     "skills": []
                 }

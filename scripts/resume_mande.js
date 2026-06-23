@@ -18,19 +18,30 @@ getResumeData();
 const displayResume = (resume) => {
     resume.forEach((details) => {
         let resumePaper = document.createElement("section");
+        resumePaper.classList.add("resume-card");
+
+
         let resumeCall = document.createElement("div");
+        resumeCall.classList.add("email-phone");
+
         let skillCard = document.createElement("div");
+        skillCard.classList.add("skill-card");
 
         let resumeName = document.createElement("h1");
+        resumeName.textContent = `${details.name}`;
+        resumeName.classList.add("title-center");
+
         let resumeEmail = document.createElement("p");
+        resumeEmail.innerHTML = `<a href="mailto:${details.email}" target="_blank" rel="noopener noreferrer">${details.email}</a>`;
+        resumeEmail.classList.add("title-center");
+
         let resumePhone = document.createElement("p");
+        resumePhone.innerHTML = `<a href="tel:${details.phone}" target="_blank" rel="noopener noreferrer">${details.phone}</a>`;
+        resumePhone.classList.add("title-center");
 
         // I will add a whatsapp icon to the phone number
         let resumePhoneWhatsapp = document.createElement("img");
         resumePhoneWhatsapp.setAttribute("src", details.whatsappIcon);
-        // resumePhoneWhatsapp.setAttribute("src", `<a href="${details.whatsapp}" target="_blank" rel="noopener noreferrer">${details.whatsappIcon}</a>`);
-        // resumePhoneWhatsapp.innerHTML = `<a href="${details.whatsapp}" target="_blank" rel="noopener noreferrer">${details.whatsappIcon}</a>`;
-        // resumePhoneWhatsapp.src = `<a href="${details.whatsapp}" target="_blank" rel="noopener noreferrer">${details.whatsappIcon}</a>`;
         resumePhoneWhatsapp.setAttribute("alt", "WhatsApp Me");
         resumePhoneWhatsapp.setAttribute("loading", "lazy");
         resumePhoneWhatsapp.style.width = "20px";
@@ -39,7 +50,6 @@ const displayResume = (resume) => {
 
         // I will add the whatsapp link
         let whatsappLink = document.createElement("a");
-        // whatsappLink.setAttribute("href", `${details.whatsapp}`);
         whatsappLink.setAttribute("href", details.whatsapp);
         whatsappLink.setAttribute("target", "_blank");
         whatsappLink.setAttribute("rel", "noopener noreferrer");
@@ -47,7 +57,6 @@ const displayResume = (resume) => {
 
         // I will add the link to the whatsapp icon
         whatsappLink.appendChild(resumePhoneWhatsapp);
-        // resumePhoneWhatsapp.innerHTML = `<a href="https://wa.me/${details.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp</a>`;
 
         // Here I will add my picture
         // let myPortrait = document.createElement("img");
@@ -59,47 +68,46 @@ const displayResume = (resume) => {
         // myPortrait.style.display = "block";
 
         let resumeLinkedIn = document.createElement("p");
-        let resumeAddress = document.createElement("p");
-        let resumeTitle = document.createElement("p");
-        let resumeSummary = document.createElement("p");
-        let resumeSkillTitle = document.createElement("p");
-        let resumeSkillPartOne = document.createElement("ul");
-        let resumeSkillPartTwo = document.createElement("ul");
-        let resumeExperienceTitle = document.createElement("p");
-        let resumeExperience = document.createElement("div");
-        let resumeTitles = document.createElement("div");
-        // let resumeResponsibilities = document.createElement("ul");
-        let resumeEducationTitle = document.createElement("p");
-        let resumeEducation = document.createElement("ul");
-        // let period = document.createElement("p");
-
-        
-        resumePaper.classList.add("resume-card");
-        resumeCall.classList.add("email-phone");
-        resumeName.classList.add("title-center");
-        resumeEmail.classList.add("title-center");
-        resumePhone.classList.add("title-center");
+        resumeLinkedIn.innerHTML = `<a href="${details.linkedIn}" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/celestin-mande-mande1</a>`;
         resumeLinkedIn.classList.add("title-center");
-        resumeAddress.classList.add("title-center", "address");
-        resumeTitle.classList.add("title-resume");
-        resumeSummary.classList.add("summary");
-        resumeSkillTitle.classList.add("skill-title");
-        skillCard.classList.add("skill-card");
-        resumeExperienceTitle.classList.add("experience-title");
-        resumeEducationTitle.classList.add("education-title");
-        resumeExperience.classList.add("experience");
-        resumeEducation.classList.add("education");
 
+        let resumeAddress = document.createElement("p");
+        resumeAddress.classList.add("title-center", "address");
+        resumeAddress.textContent = `${details.address}`;
+
+
+        // let resumeTitles = document.createElement("div");
+        let resumeTitle = document.createElement("p");
+        resumeTitle.textContent = `${details.title}`;
+        resumeTitle.classList.add("title-resume");
+
+        let resumeSummary = document.createElement("p");
+        resumeSummary.textContent = `${details.summary}`;
+        resumeSummary.classList.add("summary");
+
+        let resumeSkillTitle = document.createElement("p");
+        resumeSkillTitle.textContent = `${details.skill}`;
+        resumeSkillTitle.classList.add("skill-title");
+
+        let resumeSkillPartOne = document.createElement("ul");
         details.skillPartOne.forEach(skill => {
             let skillList = document.createElement("li");
             skillList.textContent = skill;
             resumeSkillPartOne.appendChild(skillList);
         });
+
+        let resumeSkillPartTwo = document.createElement("ul");
         details.skillPartTwo.forEach(skill => {
             let skillList = document.createElement("li");
             skillList.textContent = skill;
             resumeSkillPartTwo.appendChild(skillList);
         });
+
+        let resumeExperienceTitle = document.createElement("p");
+        resumeExperienceTitle.textContent = `${details.experienceTitle}`;
+        resumeExperienceTitle.classList.add("experience-title");
+
+        let resumeExperience = document.createElement("div");
         details.experience.forEach(expert => {
             let experienceBlock = document.createElement("div");
             let experienceTitle = document.createElement("p");
@@ -121,7 +129,7 @@ const displayResume = (resume) => {
                 responsibilitiesList.classList.add("responsibility-list");
             });
             // experienceTitle.textContent = `${expert.position} | ${expert.company} | ${expert.duration}`;
-            experienceTitle.textContent = `${expert.position} | ${expert.company}`;
+            experienceTitle.innerHTML = `${expert.position} | <a href="${expert.companyWebsite}" target="_blank" rel="noopener noreferrer">${expert.company}</a>`;
             allPeriods.textContent = `${expert.duration}`;
             // period.textContent = expert.duration;
             positionDuration.appendChild(experienceTitle);
@@ -133,6 +141,14 @@ const displayResume = (resume) => {
             resumeExperience.appendChild(experienceBlock);
             // resumeTitles.appendChild(experienceTitle);
         });
+        resumeExperience.classList.add("experience");
+
+        // let resumeResponsibilities = document.createElement("ul");
+        let resumeEducationTitle = document.createElement("p");
+        resumeEducationTitle.textContent = `${details.educationTitle}`;
+        resumeEducationTitle.classList.add("education-title");
+
+        let resumeEducation = document.createElement("ul");
         details.education.forEach(educated => {
             let educationBlock = document.createElement("li");
             let educationTitle = document.createElement("p");
@@ -162,7 +178,7 @@ const displayResume = (resume) => {
             // });
             // educationList.textContent = educated;
             educationTitle.textContent = `${educated.degree}`;
-            educationInstitution.textContent = `${educated.institution}`;
+            educationInstitution.innerHTML = `<a href="${educated.instWebsite}" target="_blank" rel="noopener noreferrer">${educated.institution}</a>`;
             educationPeriod.textContent = `${educated.duration}`;
 
             institutionPeriod.appendChild(educationTitle);
@@ -174,21 +190,16 @@ const displayResume = (resume) => {
             educationBlock.appendChild(educationSkills);
             resumeEducation.appendChild(educationBlock);
         });
+        resumeEducation.classList.add("education");
 
-        resumeName.textContent = `${details.name}`;
-        resumeEmail.innerHTML = `<a href="mailto:${details.email}" target="_blank" rel="noopener noreferrer">${details.email}</a>`;
-        resumePhone.innerHTML = `<a href="tel:${details.phone}" target="_blank" rel="noopener noreferrer">${details.phone}</a>`;
+        
+        
+        
+        
+
 
      
 
-        resumeLinkedIn.innerHTML = `<a href="${details.linkedIn}" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/celestin-mande-mande1</a>`;
-        resumeAddress.textContent = `${details.address}`;
-        resumeTitle.textContent = `${details.title}`;
-        resumeSummary.textContent = `${details.summary}`;
-        resumeSkillTitle.textContent = `${details.skill}`;
-        resumeExperienceTitle.textContent = `${details.experienceTitle}`;
-        resumeEducationTitle.textContent = `${details.educationTitle}`;
-        // period.textContent = details.duration;
 
         resumeCall.appendChild(resumeEmail);
         resumeCall.appendChild(resumePhone);
