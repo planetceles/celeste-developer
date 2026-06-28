@@ -1,0 +1,52 @@
+[
+    {
+        "country": "United States",
+        "city": "New York",
+        "timezone": "America/New_York"
+    },
+    {
+        "country": "Mexico",
+        "city": "Mexico City",
+        "timezone": "America/Mexico_City"
+    },
+    {
+        "country": "Brazil",
+        "city": "São Paulo",
+        "timezone": "America/Sao_Paulo"
+    },
+    {
+        "country": "United Kingdom",
+        "city": "London",
+        "timezone": "Europe/London"
+    },
+    {
+        "country": "Germany",
+        "city": "Berlin",
+        "timezone": "Europe/Berlin"
+    },
+    {
+        "country": "South Africa",
+        "city": "Johannesburg",
+        "timezone": "Africa/Johannesburg"
+    },
+    {
+        "country": "India",
+        "city": "New Delhi",
+        "timezone": "Asia/Kolkata"
+    },
+    {
+        "country": "China",
+        "city": "Beijing",
+        "timezone": "Asia/Shanghai"
+    },
+    {
+        "country": "Japan",
+        "city": "Tokyo",
+        "timezone": "Asia/Tokyo"
+    },
+    {
+        "country": "Australia",
+        "city": "Sydney",
+        "timezone": "Australia/Sydney"
+    }
+]
